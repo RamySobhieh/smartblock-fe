@@ -4,6 +4,7 @@ import { DropDownItem, SelectedItem } from "@/Models/models";
 import { FilterDropDown } from "./FilterDropDown";
 import { ReceiptRussianRuble } from "lucide-react";
 import { Button } from "./ui/button";
+import { Container, Main } from "./craft";
 const frameworks: DropDownItem[] = [
   {
     value: "next.js",
@@ -38,8 +39,8 @@ function FilterProperties() {
     selectedItems.push(item);
   };
   return (
-    <div className="w-full flex items-center justify-center">
-      <main className="translate-y-[-50%]">
+    <div className="w-full mx-auto flex items-center justify-center">
+      <div className="translate-y-[-50%] w-full max-w-[1400px]">
         <Card>
           <CardHeader>
             <CardTitle>Search for available properties</CardTitle>
@@ -80,7 +81,7 @@ function FilterProperties() {
             </div>
           </CardContent>
         </Card>
-      </main>
+      </div>
     </div>
   );
 }

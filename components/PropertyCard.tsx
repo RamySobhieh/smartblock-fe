@@ -14,7 +14,7 @@ import { Bed, Proportions, ShowerHead } from "lucide-react";
 
 function PropertyCard() {
   return (
-    <Card className="flex flex-col w-full overflow-hidden">
+    <Card className="flex flex-col w-full overflow-hidden hover:scale-105 ease-in duration-150 cursor-pointer">
       <div className="aspect-video relative w-full">
         <Badge variant="default" className="absolute top-4 left-4 z-10">
           New Listing

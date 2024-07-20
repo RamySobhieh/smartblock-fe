@@ -1,19 +1,16 @@
-// React and Next.js imports
 import Image from "next/image";
 import Link from "next/link";
-
-// Third-party library imports
 import { Github, Twitter, Facebook } from "lucide-react";
-
-// Asset imports
-import Logo from "@/public/vercel.svg";
+import Logo from "@/public/next.svg";
+import { Container, Section } from "./craft";
+import Balancer from "react-wrap-balancer";
 import { Button } from "./ui/button";
 
 export default function Footer() {
   return (
-    <footer>
-      <div>
-        <div className="grid gap-12 md:grid-cols-[1.5fr_0.5fr_0.5fr]">
+    <footer className="">
+      <Section className="w-full ">
+        <Container className="grid gap-12 md:grid-cols-[1.5fr_0.5fr_0.5fr] w-full ">
           <div className="not-prose flex flex-col gap-6">
             <Link href="/">
               <h3 className="sr-only">brijr/components</h3>
@@ -26,10 +23,10 @@ export default function Footer() {
               ></Image>
             </Link>
             <p>
-              <p>
+              <Balancer>
                 brijr/components is a collection of Next.js, React, Typescript
                 components for building landing pages and websites.
-              </p>
+              </Balancer>
             </p>
           </div>
           <div className="flex flex-col gap-2">
@@ -44,8 +41,8 @@ export default function Footer() {
             <Link href="/terms-of-service">Terms of Service</Link>
             <Link href="/cookie-policy">Cookie Policy</Link>
           </div>
-        </div>
-        <div className="not-prose flex flex-col justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
+        </Container>
+        <Container className="not-prose flex flex-col justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
           <div className="flex gap-2">
             <Button variant="outline" size="icon">
               <Github />
@@ -61,8 +58,8 @@ export default function Footer() {
             © <a href="https://github.com/brijr/components">brijr/components</a>
             . All rights reserved. 2024-present.
           </p>
-        </div>
-      </div>
+        </Container>
+      </Section>
     </footer>
   );
 }
