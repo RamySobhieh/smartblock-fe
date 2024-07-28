@@ -1,6 +1,7 @@
 "use client";
 import Carousel from "@/components/Carousel";
-import { Main } from "@/components/craft";
+import ListedTokensTable from "@/components/LIstedTokensTable";
+import SellModal from "@/components/SellModal";
 import SpecsCard from "@/components/SpecsCard";
 import { Button } from "@/components/ui/button";
 import {
@@ -59,7 +60,7 @@ This well-maintained home has seen several recent improvements:
 Don't miss this opportunity to make this lovely property your new home. Its combination of modern amenities, recent updates, and prime location make it a rare find in today's competitive real estate market. Schedule your viewing today and experience the charm of 1234 Maple Lane for yourself!
 `;
   return (
-    <div className="flex justify-center items-center flex-col w-full mt-24">
+    <div className="flex justify-center items-center flex-col w-full ">
       <div className="flex max-w-[1400px] w-full justify-center items-center flex-col p-4 md:p-12">
         {/* TITLE */}
         <div className="items-start flex flex-col gap-4 w-full mb-14">
@@ -113,9 +114,17 @@ Don't miss this opportunity to make this lovely property your new home. Its comb
                   <Button size={"lg"} className="w-full">
                     Buy
                   </Button>
-                  <Button size={"lg"} variant={"outline"} className="w-full">
-                    Sell
-                  </Button>
+                  <SellModal
+                    trigger={
+                      <Button
+                        size={"lg"}
+                        variant={"outline"}
+                        className="w-full"
+                      >
+                        Sell
+                      </Button>
+                    }
+                  />
                 </div>
               </CardFooter>
             </Card>
@@ -124,6 +133,11 @@ Don't miss this opportunity to make this lovely property your new home. Its comb
 
         <div className="flex flex-col items-start w-full justify-start mt-20">
           <MarkdownRenderer content={propertyDetails} />
+        </div>
+
+        <div className="w-full mt-20">
+          <h2 className="mb-6">Listed Tokens</h2>
+          <ListedTokensTable></ListedTokensTable>
         </div>
       </div>
     </div>
