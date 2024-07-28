@@ -1,10 +1,18 @@
-import { MapPin, House, LayoutPanelLeft } from "lucide-react";
+import {
+  MapPin,
+  House,
+  LayoutPanelLeft,
+  ChevronLeft,
+  ChevronRight,
+  ArrowRight,
+} from "lucide-react";
 const iconMap = {
   location: MapPin,
   house: House,
   propertyLayout: LayoutPanelLeft,
+  arrowLeft: ChevronLeft,
+  arrowRight: ChevronRight,
 };
-
 export type IconKey = keyof typeof iconMap;
 
 interface IconProps {

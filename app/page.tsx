@@ -9,11 +9,9 @@ import PropertySection from "@/components/PropertySection";
 export default function Home() {
   return (
     <div>
-      <Navbar></Navbar>
       <HeaderSection></HeaderSection>
       <FilterProperties></FilterProperties>
       <PropertySection></PropertySection>
-      <Footer></Footer>
     </div>
   );
 }

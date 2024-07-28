@@ -17,7 +17,7 @@ export function Navbar() {
   const { setTheme } = useTheme();
 
   return (
-    <div className="absolute top-0 left-0 bg-transparent w-full flex items-center justify-center p-4 md:p-8 z-10">
+    <div className="fixed top-0 left-0 bg-transparent w-full flex items-center justify-center p-4 md:p-8 z-10 h-24">
       <div className="justify-between w-full max-w-[1400px] items-center flex">
         <Image
           src={Logo}
